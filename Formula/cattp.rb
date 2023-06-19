@@ -1,4 +1,4 @@
-class Loremclipsum < Formula
+class Cattp < Formula
     desc "A CLI tool to understand HTTP codes and cats."
     homepage "https://github.com/Schrodinger-Hat/cattp"
     url "https://github.com/Schrodinger-Hat/cattp/raw/main/cattp.tar.gz"
