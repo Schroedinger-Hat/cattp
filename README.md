@@ -96,7 +96,7 @@ Default value `false`
 Default value `false`
 
 _example_
-`cattp -s 404`
+`cattp -s 404 -d`
 `cattp -s 404 -o`
 `cattp -s 404 -do`
 
