@@ -95,6 +95,6 @@ impl StatusCodes {
     }
 
     pub fn get_explanation(_status: i16) -> String {
-        "Coming soon. Not implemented yet.".to_string()
+        "Coming soon. Not implemented yet. Join @ Schrodinger Hat to help us develop this feature!".to_string()
     }
 }
