@@ -59,8 +59,6 @@ This is built in `rust`
 
 ### Install it with Homebrew
 
-Coming soon...
-
 ```
  brew tap Schrodinger-Hat/cattp https://github.com/Schrodinger-Hat/cattp
  brew update
