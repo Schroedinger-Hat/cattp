@@ -93,4 +93,8 @@ impl StatusCodes {
             _ => "Unknown".to_string(),
         }
     }
+
+    pub fn get_explanation(_status: i16) -> String {
+        "Coming soon. Not implemented yet.".to_string()
+    }
 }

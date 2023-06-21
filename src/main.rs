@@ -6,14 +6,24 @@ mod status_codes;
 #[derive(Parser, Debug)]
 #[clap(version = "1.0", author = "404answernotfound @ Schrodinger Hat")]
 struct Cli {
-    #[clap(short, long)]
+    #[clap(required = true)]
     status: i16,
 
     #[clap(short, long)]
     description: bool,
 
     #[clap(short, long)]
-    open: bool,
+    no_open: bool,
+
+    #[clap(short, long)]
+    explain: bool,
+}
+
+fn print_status_code_description(status: i16) {
+    println!(
+        "Status Code Description: {}",
+        status_codes::StatusCodes::get_description(status)
+    );
 }
 
 fn main() {
@@ -28,21 +38,26 @@ fn main() {
 
     // Print description
     match args.description {
-        true => println!(
-            "Status Code Description: {}",
-            status_codes::StatusCodes::get_description(status)
-        ),
+        true => print_status_code_description(status),
         _ => (),
     }
 
-    match args.open {
-        true => {
+    match args.no_open {
+        false => {
             let url = format!("https://http.cat/{}", status);
             match webbrowser::open(&url) {
                 Ok(_) => println!("Opened {} in browser", url),
                 Err(_) => println!("Failed to open {} in browser", url),
             }
         }
-        _ => exit(0),
+        _ => print_status_code_description(status),
+    }
+
+    match args.explain {
+        true => println!(
+            "Explanation: {}",
+            status_codes::StatusCodes::get_explanation(status)
+        ),
+        _ => (),
     }
 }
