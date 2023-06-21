@@ -1,6 +1,8 @@
 RELEASE_NAME := cattp
 EXECUTABLE := ./target/release
 AUTOMATED_COMMIT := $(shell git rev-parse --short HEAD)
+EMOJIS := 🐱 🐈 😺 😸 😹 😻 😼 😽 🙀 😿 😾
+RANDOM_EMOJI := $(shell echo $(EMOJIS) | tr ' ' '\n' | shuf | head -n 1)
 
 .PHONY: release
 
@@ -20,5 +22,8 @@ get-new-sha:
 
 push:
 	git add . && \
-	git commit -m "Automated commit #$()" && \
+	git commit -m "$(RANDOM_EMOJI) Automated commit-#$(AUTOMATED_COMMIT)" && \
 	git push origin main
+
+emoji:
+	@echo $(RANDOM_EMOJI)
