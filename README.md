@@ -65,6 +65,12 @@ This is built in `rust`
  brew install cattp
 ```
 
+### Updating it with Homebrew
+
+Sometimes Homebrew will not upgrade your package directly with `brew update && brew upgrade`. That's not a problem.
+Just `brew cleanup && brew uninstall cattp && brew install cattp` if that's the case. Or you can delete the file mismatch if you feel
+that you want to do that and then just run `brew upgrade`
+
 ### Install it manually
 
 Unzip the `cattp.tar.gz` and `mv` the executable so that it can be found in your `$PATH` variable.

@@ -1,5 +1,6 @@
 RELEASE_NAME := cattp
 EXECUTABLE := ./target/release
+AUTOMATED_COMMIT := $(shell git rev-parse --short HEAD)
 
 .PHONY: release
 
@@ -16,3 +17,8 @@ release:
 
 get-new-sha:
 	curl -sL https://github.com/Schrodinger-Hat/cattp/raw/main/cattp.tar.gz | shasum -a 256
+
+push:
+	git add . && \
+	git commit -m "Automated commit #$()" && \
+	git push origin main
