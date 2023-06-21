@@ -89,20 +89,27 @@ Install `rust` on your systems. Run `cargo install --path [a path of your choice
 
 ## Usage
 
-`cattp [-s [--status] int] [-d [--description] -o [--open]]`
+```
+Usage: cattp [OPTIONS] <STATUS>
 
-`-s, --status`
+Arguments:
+  <STATUS>
 
-`-d, --description`
-Default value `false`
-
-`-o, --open`
-Default value `false`
+Options:
+  -d, --description
+  -n, --no-open
+  -e, --explain
+  -h, --help         Print help
+  -V, --version      Print version
+```
 
 _example_
-`cattp -s 404 -d`
-`cattp -s 404 -o`
-`cattp -s 404 -do`
+`cattp 404 -d`
+`cattp 404 -n`
+`cattp 404 -e`
+
+You can even use more flags together  
+`cattp 404 -den`
 
 The console will output the status code and also open your system's web browser if `o` flag is present.
 
