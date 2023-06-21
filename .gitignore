@@ -1,1 +1,5 @@
 /target
+.vscode
+build
+cattp
+.DS_Store
