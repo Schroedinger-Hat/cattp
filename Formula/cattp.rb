@@ -3,7 +3,7 @@ class Cattp < Formula
     homepage "https://github.com/Schrodinger-Hat/cattp"
     url "https://github.com/Schrodinger-Hat/cattp/raw/main/cattp.tar.gz"
     sha256 "fb759ae362bbfc4f41090cf4c97855226c67ff6a63369629e5ab417131387279"
-    version "1.0.3"
+    version "1.0.4"
     license "MIT"
   
     def install

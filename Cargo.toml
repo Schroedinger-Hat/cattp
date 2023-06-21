@@ -1,6 +1,6 @@
 [package]
 name = "cattp"
-version = "0.1.0"
+version = "0.1.1"
 authors = ["Lorenzo Pieri, 404answernotfound <404answernotfound.public@gmail.com>"]
 license = "MIT"
 description = "A cli tool to understand HTTP codes with cats"
