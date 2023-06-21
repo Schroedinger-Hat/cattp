@@ -13,3 +13,6 @@ release:
 	tar -czf cattp.tar.gz $(RELEASE_NAME) && \
 	mv cattp.tar.gz ../.. && \
 	shasum ../../cattp.tar.gz
+
+get-new-sha:
+	curl -sL https://github.com/Schrodinger-Hat/cattp/raw/main/cattp.tar.gz | shasum -a 256

@@ -2,7 +2,7 @@ class Cattp < Formula
     desc "A CLI tool to understand HTTP codes and cats."
     homepage "https://github.com/Schrodinger-Hat/cattp"
     url "https://github.com/Schrodinger-Hat/cattp/raw/main/cattp.tar.gz"
-    sha256 "2236b760aec8489009d2c2b1fc03a4642fdaa89224973148b249d085abf2f875"
+    sha256 "fb759ae362bbfc4f41090cf4c97855226c67ff6a63369629e5ab417131387279"
     version "1.0.2"
     license "MIT"
   
